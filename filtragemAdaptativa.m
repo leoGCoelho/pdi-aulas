@@ -11,21 +11,21 @@ subplot(3,3,7), imshow(AG), title('Ruido Gaussiano');
 
 
 
-Am1 = medfilt2(A,[3 3]);
+Am1 = wiener2(A,[3 3]);
 subplot(3,3,2), imshow(Am1), title('Filtro na Original 3x3');
 
-ASPm1 = medfilt2(ASP,[3 3]);
+ASPm1 = wiener2(ASP,[3 3]);
 subplot(3,3,5), imshow(ASPm1), title('Filtro no Salt & Pepper 3x3');
 
-AGm1 = medfilt2(AG,[3 3]);
+AGm1 = wiener2(AG,[3 3]);
 subplot(3,3,8), imshow(AGm1), title('Filtro no Gaussiano 3x3');
 
 
-Am2 = medfilt2(A,[5 5]);
+Am2 = wiener2(A,[5 5]);
 subplot(3,3,3), imshow(Am2), title('Filtro na Original 5x5');
 
-ASPm2 = medfilt2(ASP,[5 5]);
+ASPm2 = wiener2(ASP,[5 5]);
 subplot(3,3,6), imshow(ASPm2), title('Filtro no Salt & Pepper 5x5');
 
-AGm2 = medfilt2(AG,[5 5]);
+AGm2 = wiener2(AG,[5 5]);
 subplot(3,3,9), imshow(AGm2), title('Filtro no Gaussiano 5x5');

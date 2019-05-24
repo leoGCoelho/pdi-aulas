@@ -1,6 +1,6 @@
 pkg load image
 
-A = imread('eight.tif');
+A = imread('Babuino.jpg');
 subplot(3,2,1), imshow(A), title('Original');
 
 ASP = imnoise(A,'salt & pepper', 0.03);   % Adiciona 3% (0.03) de ruido "salt & pepper"
